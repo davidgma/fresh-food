@@ -1,0 +1,130 @@
+// $s20: min(20vh, 20vw);
+// $foreground1: black;
+// $background: rgb(185, 180, 180);
+
+$s1: min(1vh, 1vw);
+$s2: min(2vh, 2vw);
+$s8: min(8vh, 8vw);
+$s15: min(12vh, 12vw);
+$foreground2: rgb(43, 43, 241);
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: $s2;
+
+  & .home {
+    cursor: pointer;
+    padding: $s2;
+    display: flex;
+    text-decoration: none;
+
+    & img {
+      height: $s15;
+      padding: $s1;
+    }
+
+    & h1 {
+      color: $foreground2;
+      font-size: $s8;
+    }
+  }
+
+  & .temp-notice {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding: $s2;
+
+    & img {
+      height: $s15;
+      padding: $s1;
+    }
+
+    & p {
+      text-align: center;
+      padding: $s1;
+
+      & a {
+        cursor: pointer;
+        text-decoration: none;
+        color: $foreground2;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    border-radius: 5%;
+    width: clamp(200px, 90%, 500px);
+  }
+
+  & article {
+    width: clamp(200px, 90%, 500px);
+    font-size: clamp(12px, 6vw, 30px);
+    text-align: center;
+    margin: $s2;
+
+    & p {
+      padding: $s1;
+    }
+  }
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  // align-items: center;
+  // justify-content: center;
+  // text-align: center;
+
+  .feature {
+    display: flex;
+    // flex: 1;
+    width: clamp(200px, 100vw, 600px);
+    // width: 500px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    padding-top: min(2vh, 2vw);
+    padding-left: min(4vh, 4vw);
+    padding-right: min(4vh, 4vw);
+    text-align: center;
+
+    & p {
+      font-size: clamp(12px, 4vw, 25px);
+      // max-width: 500px;
+      // @media screen and (min-width: 800px) {
+      //   font-size: 1.3rem;
+      // }
+
+      // & a {
+      //   text-decoration: none;
+      //   color: blue;
+
+      //   &:hover {
+      //     background: lightgray;
+      //     border-radius: 5px;
+      //   }
+      // }
+    }
+
+    & img {
+      border-radius: clamp(2px, 8vw, 30px);
+      height: clamp(50px, 30vw, 200px);
+      padding: min(2vh, 2vw);
+    }
+  }
+}
