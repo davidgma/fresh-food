@@ -6,7 +6,7 @@ const routes: Routes = [
   { path: 'intro', component: MainComponent },
   // { path: 'intro', component: MainComponent },
   { path: '', redirectTo: '/intro', pathMatch: 'full' },
-  { path: '**', component: MainComponent },
+  { path: '**', component: MainComponent }
 ];
 
 @NgModule({
