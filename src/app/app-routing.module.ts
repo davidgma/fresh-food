@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
-  { path: '/', component: MainComponent },
-  { path: 'introduction', component: MainComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'intro', component: MainComponent },
+  // { path: 'intro', component: MainComponent },
+  { path: '', redirectTo: '/intro', pathMatch: 'full' },
   { path: '**', component: MainComponent },
 ];
 
