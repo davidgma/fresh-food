@@ -5,7 +5,7 @@ import { MainComponent } from './pages/main/main.component';
 const routes: Routes = [
   { path: '', component: MainComponent },
   // { path: 'intro', component: MainComponent },
-  { path: '', redirectTo: '/intro', pathMatch: 'full' },
+  // { path: '', redirectTo: '/intro', pathMatch: 'full' },
   { path: '**', component: MainComponent }
 ];
 
