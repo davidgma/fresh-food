@@ -14,7 +14,7 @@ $foreground2: rgb(43, 43, 241);
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: $s2;
+  // padding: $s2;
 
   & .home {
     cursor: pointer;
@@ -23,13 +23,14 @@ $foreground2: rgb(43, 43, 241);
     text-decoration: none;
 
     & img {
-      height: $s15;
+      height: min(8vh, 8vw);
       padding: $s1;
     }
 
     & h1 {
       color: $foreground2;
-      font-size: $s8;
+      font-size: min(6vh, 6vw);
+      padding-left: 1rem;
     }
   }
 
@@ -39,20 +40,32 @@ $foreground2: rgb(43, 43, 241);
     // justify-content: center;
     align-items: center;
     padding: $s2;
+    // background-color: rgb(25, 25, 80);
+    background-image: linear-gradient(to right, rgb(25, 25, 80) , rgb(62, 65, 146));
+    width: 100%;
+    margin-bottom: 1vh;
 
     & img {
       height: $s15;
       padding: $s1;
+      background-color: transparent;
     }
 
     & p {
       text-align: center;
       padding: $s1;
+      color: white;
+      background-color: transparent;
 
       & a {
         cursor: pointer;
         text-decoration: none;
-        color: $foreground2;
+        background-color: transparent;
+        font-weight: bold;
+
+        &:visited {
+          color: white;
+        }
       }
     }
   }
@@ -91,8 +104,9 @@ $foreground2: rgb(43, 43, 241);
   padding-bottom: min(2vh, 2vw);
   margin: min(2vh, 2vw);
   border-radius: 5px;
-  // justify-content: center;
+  justify-content: center;
   // text-align: center;
+  background-color: rgb(210, 224, 243);
 
   .feature {
     display: flex;
@@ -107,15 +121,18 @@ $foreground2: rgb(43, 43, 241);
     padding-right: min(4vh, 4vw);
     text-align: center;
     border-radius: 5px;
+    background-color: inherit;
 
     & p {
       font-size: clamp(18px, 4vw, 25px);
+      background-color: inherit;
     }
 
     & img {
       border-radius: clamp(2px, 8vw, 30px);
       height: clamp(50px, 30vw, 200px);
       padding: min(2vh, 2vw);
+      background-color: inherit;
     }
   }
 }
@@ -130,7 +147,8 @@ section.large {
   margin: 10px;
   margin-top: 20px;
   // border: 1px solid black;
-  background: rgb(73, 73, 233);
+  // background: rgb(73, 73, 233);
+  background-image: linear-gradient(to right, rgb(25, 25, 80) , rgb(62, 65, 146));
   border-radius: 25px;
 
   & p {
